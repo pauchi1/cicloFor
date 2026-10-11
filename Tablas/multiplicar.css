@@ -151,6 +151,50 @@ body {
     font-size: 0.9rem;
 }
 
+
+/* Caja de texto */
+.grupo-input {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.grupo-input label {
+    display: block;
+    margin-bottom: 8px;
+    color: #914b55;
+    font-weight: bold;
+}
+
+.grupo-input input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 2px solid #efc4c8;
+    border-radius: 12px;
+    background-color: #fffafa;
+    color: #633d42;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.grupo-input input::placeholder {
+    color: #bd999e;
+}
+
+.grupo-input input:focus {
+    border-color: #d98791;
+    box-shadow: 0 0 0 4px #f6cccc66;
+    background-color: #ffffff;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+    .grupo-input input {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
 /* Diseño responsive para celulares */
 @media (max-width: 600px) {
     .encabezado {

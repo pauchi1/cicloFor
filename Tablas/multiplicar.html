@@ -11,16 +11,27 @@
 
     <header class="encabezado">
         <h1>Aprende a multiplicar</h1>
-        <p>¡Descubre la tabla del número 3!</p>
+        <p>¡Hagamos recorderis de las tablas de multiplicar :D!</p>
 
         <button class="boton-probar" onclick="generarTablas()">PROBAR</button>
     </header>
 
-    <main class="contenedor" id="mensaje">
-        <section class="tarjeta" id="tabla">
+    <main class="contenedor">
+        <div class="top" style="margin-bottom: 20px;">
+            <div class="grupo-input">
+              <label for="txtNumero">Número de tabla:</label>
+              <input 
+                 type="number" 
+                    id="txtNumero" 
+                    name="txtNumero" 
+                    placeholder="un ejemplo y mi número favorito, el 8"
+                >
+            </div>
+        </div>
+        <section class="tarjeta" id="mensaje" >
             <h2>Tabla de multiplicar del 3</h2>
             <p class="descripcion">
-                Aprende de forma sencilla y divertida.
+                algo sencillo para comenzar a entrenar la mente.
             </p>
 
             <div class="tabla">
@@ -80,15 +91,19 @@
                 </div>
             </div>
 
-            <p class="mensaje">
-                ¡Cada paso te acerca a dominar las matemáticas!
-            </p>
         </section>
     </main>
 
-    <footer class="pie">
-        <p>© 2026 - Aprende y diviértete</p>
-    </footer>
+            <p class="mensaje">
+
+                ¡un poco más y comenzamos con la tabla del 12!
+
+            </p>
+
+<footer class="pie">
+    <p>© 2026 Palichi studio</p>
+    <img src="palichi.png"/>
+</footer>
 
     <script src="multiplicar.js"></script>
 </body>
