@@ -1,0 +1,208 @@
+/* Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff5f5;
+    color: #633d42;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+.encabezado {
+    background: linear-gradient(135deg, #f6cccc, #fbe3e3);
+    text-align: center;
+    padding: 45px 20px;
+    border-bottom: 3px solid #efbaba;
+}
+
+.encabezado h1 {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    color: #914b55;
+    margin-bottom: 8px;
+}
+
+.encabezado p {
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+    color: #80545a;
+}
+
+/* Botón PROBAR */
+.boton-probar {
+    display: inline-block;
+    background-color: #d98791;
+    color: white;
+    text-decoration: none;
+    padding: 12px 35px;
+    border-radius: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 10px #d9a0a055;
+    transition: all 0.3s ease;
+}
+
+.boton-probar:hover {
+    background-color: #c76f7b;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 14px #d9a0a077;
+}
+
+.boton-probar:focus-visible {
+    outline: 3px solid #914b55;
+    outline-offset: 4px;
+}
+
+/* Contenedor principal */
+.contenedor {
+    width: 100%;
+    max-width: 750px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Tarjeta de la tabla */
+.tarjeta {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #f1d5d7;
+    box-shadow: 0 8px 25px #a75c6512;
+}
+
+.tarjeta h2 {
+    color: #a75c66;
+    text-align: center;
+    font-size: clamp(1.35rem, 4vw, 1.9rem);
+    margin-bottom: 5px;
+}
+
+.descripcion {
+    text-align: center;
+    color: #98777b;
+    margin-bottom: 25px;
+}
+
+/* Tabla */
+.tabla {
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #f0d4d6;
+    border-radius: 12px;
+}
+
+.fila {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    align-items: center;
+    padding: 12px 10px;
+    border-bottom: 1px solid #f3e0e1;
+    transition: background-color 0.2s ease;
+}
+
+.fila:last-child {
+    border-bottom: none;
+}
+
+.fila:nth-child(even) {
+    background-color: #fff4f4;
+}
+
+.fila:hover:not(.fila-titulo) {
+    background-color: #fbe2e4;
+}
+
+.fila-titulo {
+    background-color: #eab5bb;
+    color: #713b43;
+    font-weight: bold;
+}
+
+.resultado {
+    color: #bd6874;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Mensaje final */
+.mensaje {
+    margin-top: 25px;
+    text-align: center;
+    color: #a75c66;
+    font-weight: bold;
+}
+
+/* Pie de página */
+.pie {
+    background-color: #f6dddd;
+    color: #80545a;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* Diseño responsive para celulares */
+@media (max-width: 600px) {
+    .encabezado {
+        padding: 35px 15px;
+    }
+
+    .contenedor {
+        margin: 25px auto;
+        padding: 0 12px;
+    }
+
+    .tarjeta {
+        padding: 18px 12px;
+        border-radius: 15px;
+    }
+
+    .fila {
+        padding: 11px 6px;
+        font-size: 0.95rem;
+    }
+
+    .resultado {
+        font-size: 1rem;
+    }
+
+    .mensaje {
+        font-size: 0.9rem;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 350px) {
+    .fila {
+        font-size: 0.85rem;
+        padding: 10px 4px;
+    }
+
+    .boton-probar {
+        padding: 10px 28px;
+    }
+}
+
+/* Respeta la preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        transform: none !important;
+    }
+}
